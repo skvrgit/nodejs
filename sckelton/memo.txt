@@ -1,0 +1,14 @@
+
+npm
+npm init : 
+npm install: package.json内のファイルが一括でインストールされる 
+--saveを付与するとdependenciesに依存関係が追記される。
+--save-devは開発時に必要なパッケージを記録する。
+
+npm start : package.jsonに記述されたscripts.startを実行
+npm list -g : global libraries are installed and where they're located
+
+express
+res.send() : 様々なレスポンスを返す汎用的なメソッド。
+
+bootstrap
