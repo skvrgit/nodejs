@@ -13,6 +13,7 @@
                     </tr>
                 </thead>
                 <tbody>
+		                    <% orders.forEach((order, index) => { %>
                         <tr>
                             <th scope="row"><%= "2019/2/18 23:50:00" %></th>
                             <td><%= "10#356" %></td>
@@ -25,6 +26,7 @@
                                 <a href="/delete/<%= "player.id" %>" class="btn btn-sm btn-danger">Contact</a>
                             </td>
                         </tr>
+ <% }) %>
                 </tbody>
             </table>
     </div>
