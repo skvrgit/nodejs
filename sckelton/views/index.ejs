@@ -1,35 +1,37 @@
 <% include partials/header.ejs %>
-    <div class="table-wrapper">
-            <table class="table table-hovered">
-                <thead class="thead-dark">
-                    <tr>
-                        <th scope="col">Timestamp</th>
-                        <th scope="col">Instrument</th>
-                        <th scope="col">BuySell</th>
-                        <th scope="col">Lot</th>
-                        <th scope="col">Customer</th>
-                        <th scope="col">Sales</th>
-                        <th scope="col">Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-		                    <% orders.forEach((order, index) => { %>
-                        <tr>
-                            <th scope="row"><%= "2019/2/18 23:50:00" %></th>
-                            <td><%= "10#356" %></td>
-                            <td><%= "Buy" %></td>
-                            <td><%= "1.0" %></td>
-                            <td><%= "Alice" %></td>
-                            <td><%= "Bob" %></td>
-                            <td>
-                                <a href="/edit/<%= "player.id" %>" target="_blank" rel="noopener" class="btn btn-sm btn-success">Price-Request</a>
-                                <a href="/delete/<%= "player.id" %>" class="btn btn-sm btn-danger">Contact</a>
-                            </td>
-                        </tr>
- <% }) %>
-                </tbody>
-            </table>
-    </div>
+<div class="table-wrapper">
+    <table class="table table-hovered">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Timestamp</th>
+                <th scope="col">Instrument</th>
+                <th scope="col">BuySell</th>
+                <th scope="col">Lot</th>
+                <th scope="col">Customer</th>
+                <th scope="col">Sales</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% orders.forEach((order, index) => { %>
+            <tr>
+                <th scope="row"><%= order.Timestamp %></th>
+                <td><%= order.Instrument %></td>
+                <td><%= order.BuySell %></td>
+                <td><%= order.Lot %></td>
+                <td><%= order.Customer %></td>
+                <td><%= order.Sales %></td>
+                <td>
+                    <a href="/edit/<%= "player.id" %>" target="_blank" rel="noopener"
+                        class="btn btn-sm btn-success">Price-Request</a>
+                    <a href="/delete/<%= "player.id" %>" class="btn btn-sm btn-danger">Contact</a>
+                </td>
+            </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</div>
 </div>
 </body>
+
 </html>
